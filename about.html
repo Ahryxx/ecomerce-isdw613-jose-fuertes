@@ -57,12 +57,42 @@
             padding: 15px ;
 
         }
+
+        a:hover{
+            color: red;
+        }
         a{
-            color: blue;
+            color: rgb(255, 255, 255);
         }
         a:visited{
             color:#1eb80a; 
         }
+        td:hover{
+            background-color: #1eb80a;
+        }
+        tr:nth-child(even){
+            background-color: aqua;
+        }
+        tr:nth-child(odd){
+            background-color: violet;
+        }
+        p:first-child{
+            background-color: #0816d4;
+        }
+
+        p::first-letter{
+            font-size: 50px;
+        }
+        p::first-line{
+            border-radius: 10px;
+        }
+        .micombinador>p {
+            background-color: #1eb80a;
+        }
+        a[target="_blank"]{
+           background-color: cadetblue; 
+        }
+
 
     </style>
 </head>
@@ -88,7 +118,29 @@
             <td>joedoe@gmail.com </td>
             <td>099999999 </td>
         </tr>
+        <tr>
+            <td> Joe doe </td>
+            <td>joedoe@gmail.com </td>
+            <td>099999999 </td>
+        </tr>
+        <tr>
+            <td> Joe doe </td>
+            <td>joedoe@gmail.com </td>
+            <td>099999999 </td>
+        </tr>
+        </table>
     </div>
     <a href="product.html" target="_blank"> Mis otros productos...</a>
+    
+    <div class="micombinador"> 
+        <p> Texto prueba </p>
+        <h1> prueba h1 </h1>
+    </div>
+    
+     <span>Primer elemento </span>
+     <span>Segundo elemento </span>
+     <span>Tercer elemento </span>
+     <span>Cuarto  elemento </span>
+
 </body>
 </html>

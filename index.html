@@ -3,20 +3,122 @@
 <html lang="es">
     <head>
         <title> Bienvenido a mi E-comerce </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
         <body>
-            <h1> Mi E-Commerce </h1>
+            
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Mi E-Commerce </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Productos</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Consolas
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Ps2 </a></li>
+                          <li><a class="dropdown-item" href="#">Ps3</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">XBOX</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                  </div>
+                </div>
+              </nav>
+            <!--
             <ul>
                 <li> Home </li>
                 <li> Productos</li>
                 <li><a href="about.html" target="_blank"> Acerca de...</a> </li>
                 <li> <a href="contact.html">  Contacto </li> </a>
             </ul>
+            -->
 
         <hr> 
-    <h1>
-        Productos en Oferta 
+    <h1>Productos en Oferta </h1>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="product.html">Productos</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Especificaciones</li>
+        </ol>
+      </nav>
 
-    </h1>
+    <div class="content">
+        <div class="row">
+
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="assets/Images/Ps2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Ps2</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum doloribus quo similique, illum eum non ex, placeat sint omnis obcaecati assumenda iure rem dolor nobis quos voluptas qui quae corporis.</p>
+                      <div class="collapse" id="Ps2moreinfo">
+                        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger
+                    </div>
+                    <a href="#Ps2moreinfo"  data-bs-toggle="collapse" class="btn btn-outline-success">Mas informacion</a>
+
+                     <a href="#" class="btn btn-danger">Haga click aquí </a>
+                    </div>
+                  </div>
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                    </ul>
+                  </nav>
+            </div>
+
+            
+        
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="assets/Images/Ps3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Ps3</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum doloribus quo similique, illum eum non ex, placeat sint omnis obcaecati assumenda iure rem dolor nobis quos voluptas qui quae corporis.</p>
+                      <a href="#" class="btn btn-warning ">Haga click aquí </a>
+                    </div>
+                  </div>
+            </div>
+
+            
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="assets/Images/Xbox.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">XBOX</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum doloribus quo similique, illum eum non ex, placeat sint omnis obcaecati assumenda iure rem dolor nobis quos voluptas qui quae corporis.</p>
+                      <a href="#" class="btn btn-success">Haga click aquí </a>
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+    </div>
+    <!--
     <table> 
         <tr>
             <td> 
@@ -35,6 +137,7 @@
             </td>
         </tr>
     </table>
+    -->
 
 
 
