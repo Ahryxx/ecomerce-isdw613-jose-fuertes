@@ -1,0 +1,6 @@
+@mixin important-content ($default_font_size:25px){
+    color: red;
+    font-size: $default_font_size;
+    font-weight: bold;
+    border: 1px blue solid; 
+}

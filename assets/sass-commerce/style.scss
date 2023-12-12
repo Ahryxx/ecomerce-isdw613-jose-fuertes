@@ -1,0 +1,10 @@
+$background: rgb(52, 175, 89);
+$myFont: Helvetica, sans-serif; 
+$myFontSize: 18px;
+
+.texto_prueba {
+    background-color: $background;
+    font-size: $myFont;
+    $myColor:rgb(8, 46, 8) ; 
+    color:$myColor; 
+}
