@@ -3,28 +3,133 @@
 <head>
     <title>Contáctenos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        input:invalid{
+            border: 3px solid red; 
+        }
+        input:valid{
+            border: 3px solid green; 
+        }
+    </style>
+
 </head>
-<body>
+
+<body onload="pageInitialize(); ">
 
 <div class="container mt-5">
     <h1>Contáctenos</h1>
-    <form>
+    <form method="GET" action="/processForm.html" onsubmit="return validateForm()">
         <div class="mb-3">
-            <label class="form-label">Nombre</label>
-            <input type="text" class="form-control">
+            <label class="form-label" for="name" >Nombre</label>
+            <input id="name"type="text" placeholder="Ingrese aqui su nombre" onchange="changeInput()" name="nombre" 
+            class="form-control" required minlength="5" maxlength="10">
         </div>
         <div class="mb-3">
-            <label class="form-label">Email</label>
-            <input type="email" class="form-control">
+            <label class="form-label" for="edad" >Edad</label>
+            <input id="edad" type="number" placeholder="Ingrese aqui su edad" onchange="changeInput()" name="edad" class="form-control" >
         </div>
         <div class="mb-3">
-            <label class="form-label">Comentario</label>
-            <textarea class="form-control" rows="5">Introduzca aquí su información</textarea>
+            <label class="form-label" for="email">Email</label>
+            <input id="email" type="email" placeholder="Ingrese aqui su correo " onkeydown="onkeydownevent()" name="email" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="comentario">Comentario</label>
+            <textarea id="comentario" placeholder="Digite aqui su comentario" class="form-control"  name="comentario" rows="5"></textarea>
+            <br/>
+            <label>Sistemas Operativos </label>
+            
+            <input type="checkbox" id="windows" name="os" value="Windows">
+            <label for="windows">Windows</label>
+            
+            <input type="checkbox" id="macos" name="os" value="Macos">
+            <label for="macos">Macos</label>
+            
+            <input type="checkbox" id="linux" name="os" value="Linux">
+            <label for="linux">Linux</label>
+
+            <br />
+            <label > Metodo de pago </label>
+            <br />
+            <input type="radio" id="creditcard" name="paymentmethod" value="creditcard">
+            <label for="creditcard">Tarjeta de credito</label>
+            <br />
+            <input type="radio" id="bitcoin" name="paymentmethod" value="bitcoin">
+            <label for="bitcoin">Bitcoin</label>
+            <br />
+            <input type="radio" id="paypal" name="paymentmethod" value="paypal">
+            <label for="paypal">Paypal</label>
+            <br />
+
+            <label for="deliveryAddress"> Direccion de entrega </label>
+            <select id="deliveryAddress">
+                <option >Casa</option>
+                <option >Oficina</option>
+                <option >Otros</option>
+            </select>
+
+            <br/>
+            <br/>
+            <label for="clave">Clave</label>
+            <input id="clave" type="password" placeholder="Ingrese al clave">
+            <br/>
+            <label for="invoice">Factura</label>
+            <input id="invoice" type="file">
+            <br/>
         </div>
         <button type="submit" class="btn btn-primary">Enviar</button>
+
+        
     </form>
+    <button onclick="agregarParrafo();">Agregar Parrafo  </button>
+    <button onclick="this.innerHTML=Date()">Click Me </button>
+    <img onmouseover="changeStyle(this, '500px'); " onmouseout="changeStyle(this, '200px');" src="assets/Images/Xbox.png" alt="Hola" width="200px ">
+    
+
+    
+
+    <script>
+        function changeStyle(element,newsize){
+            element.style.width= newsize; 
+        }
+
+
+        function agregarParrafo(){
+
+            var parrafo = document.createElement("p"); 
+        var texto=document.createTextNode("Este parrafo fue creado dinamicamente"); 
+        parrafo.appendChild(texto); 
+        document.body.appendChild(parrafo); 
+        }
+
+        function pageInitialize(){
+            console.log("pageInitialize......")
+        }
+        
+        function changeInput(){
+            
+            console.log("changeInput......")
+        }
+        function onkeydownevent(){
+            console.log("onkeyevent......")
+        }
+        function validateForm(){
+            
+           /*var inputEdad = document.getElementById=("edad")
+           var inputName = document.getElementById=("name")
+           if(inputName.value==''){
+            return false; 
+           }
+            
+           if(isNaN(  inputEdad.value ) || inputEdad.value<0 || inputEdad.value>100){
+            return false; 
+           }
+           return true; 
+           */
+        }
+    </script>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
 </body>
 </html>
